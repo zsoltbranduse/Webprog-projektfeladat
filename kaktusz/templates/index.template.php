@@ -10,11 +10,21 @@
 </head>
 <body>
 	<header>
+		<div id="title">
 		<h1><?= $header['title'] ?></h1>
+		</div>
+		<div id="searchbar">
+			<form action="/action_page.php">
+			  <input type="hidden" name="sitesearch" value="http://www.beadandofeladat.infora.hu/" />
+			  Search site: <input type="search" name="q"><br>
+			  <input type="submit">
+			</form>
+		</div>
 		<?php if(isset($_SESSION['login'])) { ?>Bejlentkezve: <strong><?= $_SESSION['csn']." ".$_SESSION['un']." (".$_SESSION['login'].")" ?></strong><?php } ?>
 	</header>
-	
+		
     <div id="wrapper">
+	
         <aside id="nav">
             <nav>
                 <ul>
